@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Character Index - A Place That Does Not Exist</title>
+  </head>
+  <body>
+      <h1>Character Index - A Place That Does Not Exist</h1>
+      <ul>
+        <% @characters.each do |character| %>
+        <li><p><strong><a href ="/characters/<%= character.id %>"><%= character.full_name %></a></p></strong></li>
+        <% end %>
+      </ul>
+  </body>
+</html>

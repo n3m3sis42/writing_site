@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ERROR - New record not saved</title>
+  </head>
+  <body>
+    <h3>Your new record was not saved to the database due to the following errors: </h3>
+    <% @errors.each do |message| %>
+    <p><%= message %></p>
+    <% end %>
+    <br />
+    <p>Please click the Back button on your browser to try again, or click <a href = "/">here</a> to return to the main page.</p>
+  </body>
+</html>

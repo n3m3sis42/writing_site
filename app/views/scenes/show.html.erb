@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scenes - Viewing <%= @scene.name %> </title>
+  </head>
+  <body>
+      <br />
+        <p><strong><%= @scene.display_number %> <%= @scene.name %></strong></p>
+        <p> (This scene is part of arc #<%= @scene.arc.arc_number %>)</p>
+        <br />
+        <p><strong>Description: </strong> <%= @scene.description %></p>
+        <p><strong>Notes: </strong> <%= @scene.notes %></p>
+
+      <br />
+      <br />
+
+      <strong> <a href = "/scenes/<%= @scene.id %>/edit">Edit scene info</a> | <a href = "#">Edit scene locations</a> | <a href = "#">Edit scene characters</a></strong>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add New Scene - A Place That Does Not Exist</title>
+  </head>
+  <body>
+    <form action="/scenes" method="post">
+      <h1> Add a scene to the database</h1>
+      <br />
+        <p><label for="name">Scene Name: </label><input type="text" id="name" name="scene[name]"></p>
+        <p><label for="scene_num">Scene Number: </label><input type="text" id="scene_num" name="scene[scene_number]"></p>
+        <br />
+        <br />
+        <div>
+        <p><label for="desc">Scene Description: </label></p>
+        <textarea type="text" id="desc" name="scene[description]"></textarea>
+        <br />
+        <br />
+        <p><label for="notes">Scene Notes: </label></p>
+        <textarea type="comment" id="notes" name="scene[notes]"></textarea>
+        </div>
+        <br />
+        <br />
+        <p> <input type="submit" value="Save New Scene"></p>
+    </form>
+  </body>
+</html>

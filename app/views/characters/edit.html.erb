@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Characters - Edit</title>
+  </head>
+  <body>
+    <form action="/characters/<%= @character.id %>" method="POST">
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      <h1> Edit Your Character</h1>
+      <br />
+        <p><label for="fn">First Name: </label><input type="text" id="fn" name="character[first_name]" value="<%= @character.first_name %>"</p>
+        <p><label for="mn">Middle Name: </label><input type="text" id="mn" name="character[middle_name]" value="<%= @character.middle_name %>"</p>
+        <p><label for="ln">Last Name: </label><input type="text" id="ln" name="character[last_name]" value="<%= @character.last_name %>"></p>
+        <p><label for="nick">Goes By: </label><input type="text" id="nick" name="character[goes_by]" value="<%= @character.goes_by %>"</p>
+        <br />
+        <p><label for="dob">Date of Birth: </label><input type="text" id="dob" name="character[birth_date]" value="<%= @character.birth_date %>"></p>
+        <p><label for="ht_ft">Height (e.g. 5 feet, 4 inches for 5'4"): </label><input type="text" id="ht_ft" name="character[height_feet]" value="<%= @character.height_feet %>"> feet, <input type="text" id="ht_in" name="character[height_inches]" value="<%= @character.height_inches %>"> inches</p>
+        <p><label for="wt">Weight: </label><input type="text" id="ht" name="character[weight]" value="<%= @character.weight %>"></p>
+        <p><label for="eyes">Eye Color: </label><input type="text" id="eyes" name="character[eye_color]" value="<%= @character.eye_color %>"></p>
+        <p><label for="hair">Hair Color: </label><input type="text" id="eyes" name="character[hair_color]" value="<%= @character.hair_color %>"></p>
+        <p><label for="skin">Skin Color: </label><input type="text" id="skin" name="character[skin_color]" value="<%= @character.skin_color %>"></p>        
+        <br />
+        <br />
+        <p> <input type="submit" value="Update Character Stats"></p>
+    </form>
+  </body>
+</html>

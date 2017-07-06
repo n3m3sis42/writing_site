@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Scene - A Place That Does Not Exist</title>
+  </head>
+  <body>
+    <form action="/scenes/<%= @scene.id %>" method="POST">
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      <h1> Edit Scene</h1>
+      <br />
+        <p><label for="name">Scene Name: </label><input type="text" id="name" name="scene[name]" value="<%= @scene.name %>"</p>
+        <p><label for="scene_num">Scene Number: </label><input type="text" id="scene_num" name="scene[scene_number]" value="<%= @scene.scene_number %>"</p>
+        <br />
+        <br />
+        <div>
+        <p><label for="desc">Scene Description: </label></p>
+        <textarea type="text" id="desc" name="scene[description]"><%= @scene.description %>"</textarea>
+        <br />
+        <br />
+        <p><label for="notes">Scene Notes: </label></p>
+        <textarea type="comment" id="notes" name="scene[notes]"><%= @scene.notes %></textarea>
+        </div>
+        <br />
+        <br />
+        <div>
+        <h3>Characters in this Scene:</h3>
+        <p><input type="checkbox" name="scene_character[]"></p>
+        </div>
+        <p> <input type="submit" value="Update Scene Info"></p>
+    </form>
+  </body>
+</html>
